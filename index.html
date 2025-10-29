@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>WDD 231 — Course Home</title>
     <meta
       name="description"
@@ -11,6 +12,8 @@
     <meta name="author" content="Samuel Apusiyine Avike" />
 
     <!-- One Google Font (Inter)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
       rel="stylesheet"
@@ -19,6 +22,11 @@
     <!-- Styles: base first, then larger  -->
     <link rel="stylesheet" href="styles/base.css" />
     <link rel="stylesheet" href="styles/larger.css" />
+
+    <!-- JS with defer -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/courses.js" defer></script>
   </head>
   <body>
     <header class="site-header">
@@ -26,7 +34,7 @@
         <a class="brand-link" href="./" aria-label="Home">
           <img
             src="images/logo.svg"
-            alt=""
+            alt="page-logo"
             class="logo"
             width="44"
             height="44"
@@ -150,9 +158,5 @@
         <p id="lastModified" aria-live="polite">Last Modified:</p>
       </div>
     </footer>
-
-    <script src="scripts/navigation.js"></script>
-    <script src="scripts/date.js"></script>
-    <script src="scripts/courses.js"></script>
   </body>
 </html>

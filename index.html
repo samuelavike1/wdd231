@@ -1,11 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Test</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>WDD 231 — Course Home</title>
+    <meta
+      name="description"
+      content="WDD 231 Course Home: links, course progress, and resources with responsive navigation."
+    />
+    <meta name="author" content="Samuel Apusiyine Avike" />
+
+    <!-- One Google Font (Inter)-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles: base first, then larger  -->
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/larger.css" />
   </head>
   <body>
-    <h1>Hello, World!</h1>
+    <header class="site-header">
+      <div class="wrap brand">
+        <a class="brand-link" href="./" aria-label="Home">
+          <img
+            src="images/logo.svg"
+            alt=""
+            class="logo"
+            width="44"
+            height="44"
+          />
+          <span class="brand-text">
+            <span class="site-title">WDD 231 — Course Home</span>
+            <span class="site-subtitle"
+              >by <span id="studentName">Samuel Apusiyine Avike</span></span
+            >
+          </span>
+        </a>
+
+        <!-- Hamburger button (small screens) -->
+        <button
+          id="menuButton"
+          class="menu-button hamburger"
+          aria-expanded="false"
+          aria-controls="siteNav"
+          aria-label="Toggle navigation"
+        ></button>
+      </div>
+
+      <nav id="siteNav" class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="./" aria-current="page" class="active">Home</a></li>
+          <li><a href="chamber/" title="Week 2 project link">Chamber</a></li>
+          <li><a href="final/" title="Week 6 final project">Final</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="wrap">
+      <h1>Home</h1>
+
+      <div class="intro-grid">
+        <!-- About Me-->
+        <section aria-labelledby="about-h">
+          <h2 id="about-h">About Me</h2>
+          <p>
+            My name is Samuel Apusiyine Avike, and I am from Ghana. I am excited
+            to be part of this web development course and look forward to
+            learning new skills and techniques. I am passionate about technology
+            and eager to enhance my knowledge in web development.I also enjoy
+            learning
+          </p>
+          <ul>
+            <li>New tecnologies.</li>
+            <li>Mathematics.</li>
+            <li>and Working with large data.</li>
+          </ul>
+        </section>
+
+        <!-- Photo -->
+        <section aria-labelledby="res-h">
+          <h2 id="res-h">Student Photo</h2>
+          <img
+            src="images/student-photo.jpg"
+            alt="A photo of Samuel Apusiyine Avike"
+            width="150"
+            class="student-photo"
+          />
+        </section>
+      </div>
+
+      <!--  Certificate Courses -->
+      <section aria-labelledby="cert-h">
+        <h2 id="cert-h">Certificate Courses</h2>
+
+        <div class="controls" role="group" aria-label="Course filters">
+          <button class="chip active" data-filter="all">All Courses</button>
+          <button class="chip" data-filter="wdd">WDD Courses</button>
+          <button class="chip" data-filter="cse">CSE Courses</button>
+          <span class="credits" id="creditsTotal" aria-live="polite"></span>
+        </div>
+
+        <div
+          id="coursesGrid"
+          class="courses-grid"
+          aria-live="polite"
+          aria-busy="false"
+        ></div>
+        <p class="hint">Hint: Completed courses are highlighted in green.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-grid">
+        <div class="social">
+          <a
+            href="https://github.com/samuelavike1/wdd231"
+            target="_blank"
+            rel="noopener"
+            aria-label="GitHub"
+          >
+            <svg width="24" height="24" aria-hidden="true" viewBox="0 0 24 24">
+              <path
+                d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.24c-3.34.73-4.04-1.6-4.04-1.6-.55-1.38-1.34-1.75-1.34-1.75-1.09-.75.08-.74.08-.74 1.21.09 1.85 1.26 1.85 1.26 1.07 1.84 2.81 1.31 3.49 1 .11-.78.42-1.31.77-1.61-2.67-.31-5.48-1.34-5.48-5.95 0-1.31.47-2.37 1.25-3.21-.13-.31-.54-1.56.12-3.25 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.67 1.69.25 2.94.12 3.25.78.84 1.25 1.9 1.25 3.21 0 4.62-2.81 5.64-5.49 5.95.43.37.82 1.1.82 2.22v3.29c0 .32.21.7.83.58A12 12 0 0 0 12 .5Z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/samuelavike"
+            target="_blank"
+            rel="noopener"
+            aria-label="LinkedIn"
+          >
+            <svg width="24" height="24" aria-hidden="true" viewBox="0 0 24 24">
+              <path
+                d="M20.45 20.45h-3.55v-5.6c0-1.34-.02-3.07-1.87-3.07-1.87 0-2.16 1.46-2.16 2.97v5.7H9.32V9h3.41v1.56h.05c.47-.89 1.62-1.83 3.33-1.83 3.56 0 4.22 2.34 4.22 5.39v6.33ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12Zm1.78 13.02H3.56V9h3.56v11.45Z"
+              />
+            </svg>
+          </a>
+        </div>
+
+        <p>
+          &copy; <span id="currentyear"></span> •
+          <span id="footerName"></span> •
+          <span id="footerLocation"></span>
+        </p>
+
+        <p id="lastModified" aria-live="polite">Last Modified:</p>
+      </div>
+    </footer>
+
+    <script src="scripts/navigation.js"></script>
+    <script src="scripts/date.js"></script>
+    <script src="scripts/courses.js"></script>
   </body>
 </html>

@@ -1,0 +1,51 @@
+@media (min-width: 820px) {
+  .brand {
+    gap: 1rem;
+  }
+
+  .menu-button {
+    display: none;
+  }
+
+  .site-nav {
+    display: block;
+    border-top: none;
+    background: transparent;
+  }
+
+  .site-nav ul {
+    display: flex;
+    gap: .5rem;
+    padding: .75rem 1rem;
+    margin: 0 auto;
+    max-width: 960px;
+  }
+
+  .site-nav li+li {
+    margin-top: 0;
+  }
+
+  .site-nav a {
+    background: #fff;
+    transition: transform .08s ease-in-out;
+  }
+
+  .site-nav a:hover {
+    text-decoration: none;
+    transform: translateY(-1px);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+  }
+
+    .intro-grid {
+      grid-template-columns: 2fr 1fr;
+      gap: 1.25rem;
+    }
+  
+    .student-photo {
+      max-width: 215px;
+    }
+}

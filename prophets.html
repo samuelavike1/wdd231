@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latter-day Prophets</title>
+
+    <!-- Fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles/prophets.css" />
+    <script src="scripts/prophets.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="wrap brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div class="title">
+          <h1>Latter-day Prophets</h1>
+          <small>WDD 231 • Fetch API Activity</small>
+        </div>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <section aria-labelledby="cards-heading" class="panel">
+        <h2 id="cards-heading">Prophet Cards</h2>
+        <p class="muted">
+          Data fetched from the BYUI JSON endpoint and rendered into responsive
+          cards.
+        </p>
+        <div id="cards" class="cards" role="list" aria-live="polite"></div>
+
+        <!-- Minimal inline template for errors/loading -->
+        <div id="status" class="status" hidden></div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">Samuel Apusiyine Avike | Latter-day Prophets</div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required first -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Accra Chamber of Commerce — Member Directory</title>
+    <meta
+      name="description"
+      content="Accra Chamber of Commerce directory of local businesses. Filter and browse members; find contacts, sites, and services."
+    />
+    <meta name="author" content="Samuel Apusiyine Avike" />
+
+    <!-- Open Graph (Facebook) -->
+    <meta
+      property="og:title"
+      content="Accra Chamber of Commerce — Member Directory"
+    />
+    <meta
+      property="og:description"
+      content="Browse the Accra Chamber directory: contacts, websites, and services from local member businesses."
+    />
+    <!-- Replace USERNAME below with your GitHub username so the image is same-origin -->
+    <meta
+      property="og:image"
+      content="https://samuelavike1.github.io/wdd231/chamber/images/logo.svg"
+    />
+    <meta
+      property="og:url"
+      content="https://samuelavike1.github.io/wdd231/chamber/directory.html"
+    />
+    <meta property="og:type" content="website" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+    <!-- Google Fonts (same as W01) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS (normalize first, then your styles) -->
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/larger.css" />
+
+    <!-- JS -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/directory.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap brand">
+        <a class="brand-link" href="./" aria-label="Chamber Home">
+          <img
+            src="images/logo.svg"
+            alt=""
+            class="logo"
+            width="44"
+            height="44"
+          />
+          <span class="brand-text">
+            <span class="site-title">Accra Chamber of Commerce</span>
+            <span class="site-subtitle">Member Directory</span>
+          </span>
+        </a>
+
+        <button
+          id="menuButton"
+          class="menu-button hamburger"
+          aria-expanded="false"
+          aria-controls="siteNav"
+          aria-label="Toggle navigation"
+        ></button>
+      </div>
+
+      <nav id="siteNav" class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <a href="directory.html" aria-current="page" class="active"
+              >Directory</a
+            >
+          </li>
+          <li><a href="join.html">Join</a></li>
+          <li><a href="discover.html">Discover</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="wrap">
+      <h1>Business Directory</h1>
+
+      <!-- View toggles -->
+      <div class="controls" role="group" aria-label="Directory view">
+        <button
+          class="chip viewBtn active"
+          data-view="grid"
+          aria-pressed="true"
+        >
+          Grid
+        </button>
+        <button class="chip viewBtn" data-view="list" aria-pressed="false">
+          List
+        </button>
+        <span class="credits" id="memberCount" aria-live="polite"></span>
+      </div>
+
+      <!-- Members container -->
+      <section
+        id="members"
+        class="members grid"
+        aria-live="polite"
+        aria-busy="true"
+      ></section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-grid">
+        <address>
+          <b>Accra Chamber of Commerce</b><br />
+          10 Independence Ave, Accra, Ghana<br />
+          info@accracc.org<br />
+          (+233) 302-555-230
+        </address>
+
+        <div class="social">
+          <a
+            href="https://github.com/samuelavike1/wdd231"
+            target="_blank"
+            rel="noopener"
+            aria-label="GitHub"
+          >
+            <!-- GitHub icon path omitted for brevity (reuse from W01) -->
+            <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 .5a12 12 0 0 0-3.79 23.39..." />
+            </svg>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/samuelavike"
+            target="_blank"
+            rel="noopener"
+            aria-label="LinkedIn"
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20.45 20.45h-3.55v-5.6..." />
+            </svg>
+          </a>
+        </div>
+
+        <p>
+          &copy; <span id="currentyear"></span> • Samuel Apusiyine Avike • WDD
+          231
+        </p>
+        <p id="lastModified" aria-live="polite">Last Modified:</p>
+      </div>
+    </footer>
+  </body>
+</html>

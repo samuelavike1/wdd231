@@ -1,0 +1,66 @@
+[
+    {
+      "name": "Accra Tech Hub",
+      "address": "12 Osu Ave, Accra",
+      "phone": "+233 302 555 101",
+      "website": "https://accratech.example.com",
+      "logo": "accra-tech.png",
+      "membership": 3,
+      "tags": ["IT", "Coworking"]
+    },
+    {
+      "name": "Blue Ocean Logistics",
+      "address": "Harbour Rd, Tema",
+      "phone": "+233 303 555 220",
+      "website": "https://blueocean.example.com",
+      "logo": "blue-ocean.png",
+      "membership": 2,
+      "tags": ["Logistics"]
+    },
+    {
+      "name": "Cocoa & Co.",
+      "address": "4 Cocoa Lane, Accra",
+      "phone": "+233 302 555 330",
+      "website": "https://cocoaco.example.com",
+      "logo": "cocoa-co.png",
+      "membership": 1,
+      "tags": ["Food", "Export"]
+    },
+    {
+      "name": "Volta Energy",
+      "address": "Ring Rd Central, Accra",
+      "phone": "+233 302 555 440",
+      "website": "https://voltaenergy.example.com",
+      "logo": "volta-energy.png",
+      "membership": 3,
+      "tags": ["Energy"]
+    },
+    {
+      "name": "Savannah Agro",
+      "address": "Tamale Ave, Tamale",
+      "phone": "+233 372 555 558",
+      "website": "https://savannahagro.example.com",
+      "logo": "savannah-agro.png",
+      "membership": 2,
+      "tags": ["Agriculture"]
+    },
+    {
+      "name": "Sunrise Hotel",
+      "address": "Labadi Rd, Accra",
+      "phone": "+233 302 555 678",
+      "website": "https://sunrisehotel.example.com",
+      "logo": "sunrise-hotel.png",
+      "membership": 1,
+      "tags": ["Hospitality"]
+    },
+    {
+      "name": "Northern Bank",
+      "address": "Bolgatanga Central",
+      "phone": "+233 382 555 789",
+      "website": "https://northernbank.example.com",
+      "logo": "northern-bank.png",
+      "membership": 3,
+      "tags": ["Finance"]
+    }
+  ]
+  

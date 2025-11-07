@@ -35,8 +35,7 @@ img.logo {
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, .07)
 }
-
-/* Header/brand/nav reused from W01 */
+/* Header & Navigation */
 .site-header {
     border-bottom: 4px solid var(--color-primary);
     background: linear-gradient(0deg, rgba(30, 58, 138, .03), rgba(30, 58, 138, .03))

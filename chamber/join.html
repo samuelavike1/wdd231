@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- required first -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accra Chamber — Join</title>
+    <meta
+      name="description"
+      content="Apply to join the Accra Chamber of Commerce. Select a membership level and submit your organization details."
+    />
+    <meta name="author" content="Samuel Apusiyine Avike" />
+
+    <!-- OG -->
+    <meta property="og:title" content="Accra Chamber — Join" />
+    <meta
+      property="og:description"
+      content="Become a member: NP, Bronze, Silver, and Gold levels."
+    />
+    <meta
+      property="og:image"
+      content="https://samuelavike1.github.io/wdd231/chamber/images/logo.svg"
+    />
+    <meta
+      property="og:url"
+      content="https://samuelavike1.github.io/wdd231/chamber/join.html"
+    />
+
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+    <!-- fonts + css (same as other pages) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/larger.css" />
+    <!-- tiny page-specific helpers -->
+    <link rel="stylesheet" href="styles/join.css" />
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/join.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap brand">
+        <a class="brand-link" href="./" aria-label="Home">
+          <img
+            src="images/logo.svg"
+            alt=""
+            class="logo"
+            width="44"
+            height="44"
+          />
+          <span class="brand-text">
+            <span class="site-title">Accra Chamber of Commerce</span>
+            <span class="site-subtitle">Membership Application</span>
+          </span>
+        </a>
+        <button
+          id="menuButton"
+          class="menu-button hamburger"
+          aria-expanded="false"
+          aria-controls="siteNav"
+          aria-label="Toggle navigation"
+        ></button>
+      </div>
+      <nav id="siteNav" class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li>
+            <a href="join.html" aria-current="page" class="active">Join</a>
+          </li>
+          <li><a href="discover.html">Discover</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="wrap">
+      <h1>Join the Chamber</h1>
+
+      <div class="join-grid">
+        <!-- FORM -->
+        <section aria-labelledby="form-h">
+          <h2 id="form-h">Membership Application</h2>
+
+          <!-- GET + action to thankyou.html -->
+          <form
+            method="get"
+            action="thankyou.html"
+            class="join-form"
+            novalidate
+          >
+            <!-- first name -->
+            <label title="Enter your given name">
+              First Name
+              <input
+                required
+                type="text"
+                name="firstName"
+                autocomplete="given-name"
+                title="First name"
+              />
+            </label>
+
+            <!-- last name -->
+            <label title="Enter your family name">
+              Last Name
+              <input
+                required
+                type="text"
+                name="lastName"
+                autocomplete="family-name"
+                title="Last name"
+              />
+            </label>
+
+            <!-- organizational title -->
+            <label
+              title="Your organizational title (letters, spaces, hyphens; min 7)"
+            >
+              Organizational Title
+              <input
+                type="text"
+                name="orgTitle"
+                autocomplete="organization-title"
+                pattern="[A-Za-z\- ]{7,}"
+                title="Use only letters, hyphens, and spaces; minimum 7 characters."
+              />
+            </label>
+
+            <!-- email -->
+            <label title="Your work email address">
+              Email
+              <input
+                required
+                type="email"
+                name="email"
+                autocomplete="email"
+                placeholder="you@example.com"
+                title="Valid email address"
+              />
+            </label>
+
+            <!-- mobile -->
+            <label title="Your mobile phone number">
+              Mobile Phone
+              <input
+                required
+                type="tel"
+                name="mobile"
+                autocomplete="tel"
+                title="Mobile phone number"
+              />
+            </label>
+
+            <!-- organization name -->
+            <label title="Your business/organization name">
+              Organization
+              <input
+                required
+                type="text"
+                name="organization"
+                autocomplete="organization"
+                title="Business or organization name"
+              />
+            </label>
+
+            <!-- membership level -->
+            <label title="Select your membership level">
+              Membership Level
+              <select
+                name="membership"
+                required
+                title="Choose a membership level"
+              >
+                <option value="" disabled selected>Select a level</option>
+                <option value="np">NP Membership (Nonprofit)</option>
+                <option value="bronze">Bronze Membership</option>
+                <option value="silver">Silver Membership</option>
+                <option value="gold">Gold Membership</option>
+              </select>
+            </label>
+
+            <!-- description -->
+            <label title="Brief description of your business or organization">
+              Organization Description
+              <textarea
+                name="description"
+                rows="5"
+                title="Organization description"
+              ></textarea>
+            </label>
+
+            <!-- timestamp (hidden) -->
+            <input type="hidden" name="timestamp" id="timestamp" />
+
+            <input type="submit" value="Apply Now" class="cta-btn" />
+          </form>
+        </section>
+
+        <!-- MEMBERSHIP CARDS -->
+        <aside aria-labelledby="levels-h">
+          <h2 id="levels-h">Membership Levels</h2>
+
+          <div class="levels">
+            <article class="level-card np">
+              <h3>NP Membership</h3>
+              <p>For non-profit organizations. No fee.</p>
+              <button
+                type="button"
+                class="level-more"
+                data-target="modal-np"
+                aria-haspopup="dialog"
+              >
+                Benefits
+              </button>
+            </article>
+
+            <article class="level-card bronze">
+              <h3>Bronze</h3>
+              <p>Starter visibility and events access.</p>
+              <button
+                type="button"
+                class="level-more"
+                data-target="modal-bronze"
+                aria-haspopup="dialog"
+              >
+                Benefits
+              </button>
+            </article>
+
+            <article class="level-card silver">
+              <h3>Silver</h3>
+              <p>Added promotion and training perks.</p>
+              <button
+                type="button"
+                class="level-more"
+                data-target="modal-silver"
+                aria-haspopup="dialog"
+              >
+                Benefits
+              </button>
+            </article>
+
+            <article class="level-card gold">
+              <h3>Gold</h3>
+              <p>Premium exposure and exclusive events.</p>
+              <button
+                type="button"
+                class="level-more"
+                data-target="modal-gold"
+                aria-haspopup="dialog"
+              >
+                Benefits
+              </button>
+            </article>
+          </div>
+        </aside>
+      </div>
+
+      <!-- DIALOG MODALS -->
+      <dialog id="modal-np" aria-labelledby="np-title">
+        <h3 id="np-title">NP Membership Benefits</h3>
+        <ul>
+          <li>No annual fee for registered nonprofits</li>
+          <li>Community service spotlights</li>
+          <li>Access to networking breakfasts</li>
+        </ul>
+        <form method="dialog"><button class="chip">Close</button></form>
+      </dialog>
+
+      <dialog id="modal-bronze" aria-labelledby="bronze-title">
+        <h3 id="bronze-title">Bronze Benefits</h3>
+        <ul>
+          <li>Directory listing + link</li>
+          <li>Member pricing for events</li>
+          <li>Quarterly training invites</li>
+        </ul>
+        <form method="dialog"><button class="chip">Close</button></form>
+      </dialog>
+
+      <dialog id="modal-silver" aria-labelledby="silver-title">
+        <h3 id="silver-title">Silver Benefits</h3>
+        <ul>
+          <li>Homepage spotlight eligibility</li>
+          <li>Two free workshop passes / year</li>
+          <li>Social media mentions</li>
+        </ul>
+        <form method="dialog"><button class="chip">Close</button></form>
+      </dialog>
+
+      <dialog id="modal-gold" aria-labelledby="gold-title">
+        <h3 id="gold-title">Gold Benefits</h3>
+        <ul>
+          <li>Guaranteed quarterly spotlight</li>
+          <li>VIP access to keynote events</li>
+          <li>Premium directory placement</li>
+        </ul>
+        <form method="dialog"><button class="chip">Close</button></form>
+      </dialog>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-grid">
+        <address>
+          <b>Accra Chamber of Commerce</b><br />
+          10 Independence Ave, Accra, Ghana<br />
+          info@accracc.org<br />
+          (+233) 302-555-230
+        </address>
+
+        <div class="social">
+          <a
+            href="https://github.com/samuelavike1/wdd231"
+            target="_blank"
+            rel="noopener"
+            aria-label="GitHub"
+          >
+            <svg width="24" height="24" aria-hidden="true" viewBox="0 0 24 24">
+              <path
+                d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.24c-3.34.73-4.04-1.6-4.04-1.6-.55-1.38-1.34-1.75-1.34-1.75-1.09-.75.08-.74.08-.74 1.21.09 1.85 1.26 1.85 1.26 1.07 1.84 2.81 1.31 3.49 1 .11-.78.42-1.31.77-1.61-2.67-.31-5.48-1.34-5.48-5.95 0-1.31.47-2.37 1.25-3.21-.13-.31-.54-1.56.12-3.25 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.67 1.69.25 2.94.12 3.25.78.84 1.25 1.9 1.25 3.21 0 4.62-2.81 5.64-5.49 5.95.43.37.82 1.1.82 2.22v3.29c0 .32.21.7.83.58A12 12 0 0 0 12 .5Z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/samuelavike"
+            target="_blank"
+            rel="noopener"
+            aria-label="LinkedIn"
+          >
+            <svg width="24" height="24" aria-hidden="true" viewBox="0 0 24 24">
+              <path
+                d="M20.45 20.45h-3.55v-5.6c0-1.34-.02-3.07-1.87-3.07-1.87 0-2.16 1.46-2.16 2.97v5.7H9.32V9h3.41v1.56h.05c.47-.89 1.62-1.83 3.33-1.83 3.56 0 4.22 2.34 4.22 5.39v6.33ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12Zm1.78 13.02H3.56V9h3.56v11.45Z"
+              />
+            </svg>
+          </a>
+        </div>
+
+        <p>
+          &copy; <span id="currentyear"></span> • Samuel Apusiyine Avike • WDD
+          231
+        </p>
+        <p id="lastModified" aria-live="polite">Last Modified:</p>
+      </div>
+    </footer>
+  </body>
+</html>

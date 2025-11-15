@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accra Chamber — Thank You</title>
+    <meta
+      name="description"
+      content="Thank you for applying to join the Accra Chamber of Commerce."
+    />
+    <meta name="author" content="Samuel Apusiyine Avike" />
+
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+    <!-- fonts + css -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/larger.css" />
+
+    <script>
+      // Render required fields from query string
+      document.addEventListener("DOMContentLoaded", () => {
+        const p = new URLSearchParams(location.search);
+        const show = (id, key) => {
+          const el = document.getElementById(id);
+          if (el) el.textContent = p.get(key) || "—";
+        };
+        show("vFirst", "firstName");
+        show("vLast", "lastName");
+        show("vEmail", "email");
+        show("vMobile", "mobile");
+        show("vOrg", "organization");
+        show("vTime", "timestamp");
+      });
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap brand">
+        <a class="brand-link" href="./" aria-label="Home">
+          <img
+            src="images/logo.svg"
+            alt=""
+            class="logo"
+            width="44"
+            height="44"
+          />
+          <span class="brand-text">
+            <span class="site-title">Accra Chamber of Commerce</span>
+            <span class="site-subtitle">Application Received</span>
+          </span>
+        </a>
+        <button
+          id="menuButton"
+          class="menu-button hamburger"
+          aria-expanded="false"
+          aria-controls="siteNav"
+          aria-label="Toggle navigation"
+        ></button>
+      </div>
+      <nav id="siteNav" class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+          <li><a href="discover.html">Discover</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="wrap">
+      <h1>Thank You!</h1>
+      <section>
+        <p>
+          We’ve received your application. A confirmation email will be sent
+          after review.
+        </p>
+
+        <h2>Your Submission</h2>
+        <dl class="submission">
+          <dt>First Name</dt>
+          <dd id="vFirst">—</dd>
+          <dt>Last Name</dt>
+          <dd id="vLast">—</dd>
+          <dt>Email</dt>
+          <dd id="vEmail">—</dd>
+          <dt>Mobile</dt>
+          <dd id="vMobile">—</dd>
+          <dt>Organization</dt>
+          <dd id="vOrg">—</dd>
+          <dt>Submitted At</dt>
+          <dd id="vTime">—</dd>
+        </dl>
+        <p><a href="join.html" class="chip">Submit another application</a></p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-grid">
+        <address>
+          <b>Accra Chamber of Commerce</b><br />
+          10 Independence Ave, Accra, Ghana<br />
+          info@accracc.org<br />
+          (+233) 302-555-230
+        </address>
+
+        <div class="social">
+          <a
+            href="https://github.com/samuelavike1/wdd231"
+            target="_blank"
+            rel="noopener"
+            aria-label="GitHub"
+          >
+            <svg width="24" height="24" aria-hidden="true" viewBox="0 0 24 24">
+              <path
+                d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.24c-3.34.73-4.04-1.6-4.04-1.6-.55-1.38-1.34-1.75-1.34-1.75-1.09-.75.08-.74.08-.74 1.21.09 1.85 1.26 1.85 1.26 1.07 1.84 2.81 1.31 3.49 1 .11-.78.42-1.31.77-1.61-2.67-.31-5.48-1.34-5.48-5.95 0-1.31.47-2.37 1.25-3.21-.13-.31-.54-1.56.12-3.25 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.67 1.69.25 2.94.12 3.25.78.84 1.25 1.9 1.25 3.21 0 4.62-2.81 5.64-5.49 5.95.43.37.82 1.1.82 2.22v3.29c0 .32.21.7.83.58A12 12 0 0 0 12 .5Z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/samuelavike"
+            target="_blank"
+            rel="noopener"
+            aria-label="LinkedIn"
+          >
+            <svg width="24" height="24" aria-hidden="true" viewBox="0 0 24 24">
+              <path
+                d="M20.45 20.45h-3.55v-5.6c0-1.34-.02-3.07-1.87-3.07-1.87 0-2.16 1.46-2.16 2.97v5.7H9.32V9h3.41v1.56h.05c.47-.89 1.62-1.83 3.33-1.83 3.56 0 4.22 2.34 4.22 5.39v6.33ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12Zm1.78 13.02H3.56V9h3.56v11.45Z"
+              />
+            </svg>
+          </a>
+        </div>
+
+        <p>
+          &copy; <span id="currentyear"></span> • Samuel Apusiyine Avike • WDD
+          231
+        </p>
+        <p id="lastModified" aria-live="polite">Last Modified:</p>
+      </div>
+    </footer>
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+  </body>
+</html>

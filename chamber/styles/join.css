@@ -1,0 +1,115 @@
+/* Layout next to cards on large screens; stacked on mobile */
+.join-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.join-form {
+    display: grid;
+    gap: .75rem;
+}
+
+.join-form label {
+    display: grid;
+    gap: .35rem;
+}
+
+.join-form input[type="text"],
+.join-form input[type="email"],
+.join-form input[type="tel"],
+.join-form select,
+.join-form textarea {
+    padding: .6rem .7rem;
+    border: 1px solid var(--chip-border);
+    border-radius: .6rem;
+    background: #fff;
+}
+
+.cta-btn {
+    padding: .6rem .9rem;
+    border: 1px solid var(--color-accent);
+    border-radius: .6rem;
+    background: #fff;
+    cursor: pointer;
+}
+
+.cta-btn:hover {
+    box-shadow: 0 0 0 3px rgba(245, 158, 11, .15) inset;
+}
+
+.levels {
+    display: grid;
+    gap: .75rem;
+}
+
+.level-card {
+    opacity: 0;
+    transform: translateY(8px);
+    padding: .9rem;
+    background: #fff;
+    border: 1px solid var(--chip-border);
+    border-radius: .75rem;
+    animation: fadeUp .6s ease forwards;
+}
+
+.level-card:nth-child(2) {
+    animation-delay: .08s
+}
+
+.level-card:nth-child(3) {
+    animation-delay: .16s
+}
+
+.level-card:nth-child(4) {
+    animation-delay: .24s
+}
+
+.level-card h3 {
+    margin: .1rem 0 .25rem;
+}
+
+.level-more {
+    margin-top: .35rem;
+}
+
+.level-card.gold {
+    border-color: #d97706
+}
+
+.level-card.silver {
+    border-color: #64748b
+}
+
+.level-card.bronze {
+    border-color: #a16207
+}
+
+.level-card.np {
+    border-color: #16a34a
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+/* dialog quick style */
+dialog {
+    border: 1px solid var(--chip-border);
+    border-radius: .75rem;
+    padding: 1rem;
+}
+
+dialog::backdrop {
+    background: rgba(15, 23, 42, .45);
+}
+
+/* Large layout */
+@media (min-width: 820px) {
+    .join-grid {
+        grid-template-columns: 2fr 1fr;
+        align-items: start;
+    }
+}

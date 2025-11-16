@@ -1,14 +1,21 @@
-// timestamp hidden field (set when page loads)
+// timestamp hidden field
 const ts = document.getElementById('timestamp');
 if (ts) ts.value = new Date().toISOString();
 
-// open/close level modals
-const buttons = document.querySelectorAll('.level-more');
-buttons.forEach(btn => {
+// open modals
+document.querySelectorAll('.level-more').forEach(btn => {
   btn.addEventListener('click', () => {
     const id = btn.getAttribute('data-target');
     const dlg = document.getElementById(id);
-    if (dlg?.showModal) dlg.showModal();
-    else dlg?.setAttribute('open',''); // basic fallback
+    dlg?.showModal?.();
+  });
+});
+
+// close modals (no <form method="dialog"> anymore)
+document.querySelectorAll('.modal-close').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const id = btn.getAttribute('data-close');
+    const dlg = document.getElementById(id);
+    dlg?.close?.();
   });
 });

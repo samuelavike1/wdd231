@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Reading Tracker Hub — W05 Website Planning Document</title>
+
+    <!-- Typography (1–3 fonts) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* ===== CSS: Color Schema (used throughout this document) ===== */
+      :root {
+        --color-bg: #ffffff;
+        --color-text: #0f172a; /* slate-900 */
+        --color-muted: #64748b; /* slate-500 */
+        --color-primary: #1e3a8a; /* blue-900 */
+        --color-accent: #f59e0b; /* amber-500 */
+        --chip-border: #e2e8f0; /* slate-200 */
+        --card: #f8fafc; /* slate-50 */
+      }
+
+      /* ===== Base ===== */
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+        font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial,
+          "Noto Sans", sans-serif;
+        color: var(--color-text);
+        background: var(--color-bg);
+        line-height: 1.6;
+      }
+
+      a {
+        color: var(--color-primary);
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      header {
+        border-bottom: 4px solid var(--color-primary);
+        background: linear-gradient(
+          0deg,
+          rgba(30, 58, 138, 0.03),
+          rgba(30, 58, 138, 0.03)
+        );
+      }
+      .wrap {
+        max-width: 960px;
+        margin-inline: auto;
+        padding: 1.25rem;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 0.85rem;
+        padding: 0.25rem 0;
+      }
+      .logo {
+        width: 44px;
+        height: 44px;
+        border-radius: 10px;
+        background: conic-gradient(
+          from 140deg,
+          var(--color-primary),
+          var(--color-accent)
+        );
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
+        position: relative;
+      }
+      .logo::after {
+        content: "RT"; /* Reading Tracker */
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        color: white;
+        font-weight: 700;
+        font-size: 0.95rem;
+        letter-spacing: 0.5px;
+      }
+      .title h1 {
+        margin: 0;
+        font-family: "Playfair Display", serif;
+        font-weight: 700;
+        line-height: 1.15;
+        font-size: clamp(1.35rem, 2.8vw + 0.6rem, 2rem);
+      }
+      .title small {
+        color: var(--color-muted);
+        display: block;
+        margin-top: 0.15rem;
+      }
+
+      nav {
+        margin-top: 0.75rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+      nav a {
+        display: inline-block;
+        padding: 0.45rem 0.7rem;
+        border: 1px solid var(--chip-border);
+        border-radius: 0.6rem;
+        background: #fff;
+      }
+
+      main {
+        padding-block: 1rem 3rem;
+      }
+      section {
+        margin-top: 1.5rem;
+        padding: 1rem;
+        background: var(--card);
+        border: 1px solid var(--chip-border);
+        border-radius: 12px;
+      }
+      section h2 {
+        margin-top: 0;
+        font-family: "Playfair Display", serif;
+        letter-spacing: 0.2px;
+        border-left: 0.35rem solid var(--color-accent);
+        padding-left: 0.6rem;
+      }
+
+      /* Color chips */
+      .chips {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin-top: 0.5rem;
+      }
+      .chip {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.6rem 0.75rem;
+        border: 1px solid var(--chip-border);
+        border-radius: 0.75rem;
+        background: #fff;
+        min-width: 220px;
+      }
+      .swatch {
+        width: 36px;
+        height: 36px;
+        border-radius: 0.5rem;
+        border: 1px solid var(--chip-border);
+      }
+      .chip b {
+        display: block;
+      }
+      .usage {
+        color: var(--color-muted);
+        font-size: 0.9rem;
+      }
+
+      /* Typography samples */
+      .typo-grid {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        margin-top: 0.5rem;
+      }
+      .sample {
+        padding: 0.8rem;
+        background: #fff;
+        border: 1px solid var(--chip-border);
+        border-radius: 0.75rem;
+      }
+      .sample h3 {
+        margin: 0 0 0.25rem;
+        font-size: 1rem;
+        color: var(--color-muted);
+        font-weight: 600;
+      }
+      .sample .display {
+        font-family: "Playfair Display", serif;
+        font-weight: 700;
+        font-size: clamp(1.2rem, 1.2vw + 0.9rem, 1.6rem);
+        color: var(--color-primary);
+      }
+      .sample .body {
+        font-size: 1rem;
+      }
+
+      /* Wireframes */
+      .wireframes {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+      }
+      @media (min-width: 820px) {
+        .wireframes {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      .frame {
+        background: #fff;
+        border: 1px dashed #cbd5e1;
+        border-radius: 12px;
+        padding: 1rem;
+      }
+      .frame h3 {
+        margin: 0 0 0.5rem;
+        color: var(--color-primary);
+      }
+      .phone,
+      .desktop {
+        width: 100%;
+        aspect-ratio: 9/16;
+        border: 2px solid #cbd5e1;
+        border-radius: 16px;
+        position: relative;
+        padding: 0.5rem;
+        background: #fdfdfd;
+      }
+      .desktop {
+        aspect-ratio: 16/9;
+        border-radius: 10px;
+      }
+      .block {
+        position: absolute;
+        background: rgba(30, 58, 138, 0.08);
+        border: 1px solid rgba(30, 58, 138, 0.2);
+        border-radius: 0.5rem;
+      }
+      .block.header {
+        top: 0.6rem;
+        left: 0.6rem;
+        right: 0.6rem;
+        height: 9%;
+      }
+      .block.hero {
+        top: 11.5%;
+        left: 0.6rem;
+        right: 0.6rem;
+        height: 16%;
+      }
+      .block.cards {
+        top: 29%;
+        left: 0.6rem;
+        right: 0.6rem;
+        height: 28%;
+      }
+      .block.tools {
+        top: 59%;
+        left: 0.6rem;
+        right: 0.6rem;
+        height: 32%;
+      }
+      .label {
+        position: absolute;
+        right: 0.4rem;
+        bottom: 0.4rem;
+        font-size: 0.75rem;
+        color: #475569;
+        background: #fff;
+        padding: 0.15rem 0.35rem;
+        border: 1px solid #e2e8f0;
+        border-radius: 0.35rem;
+      }
+      /* Desktop layout hints */
+      .desktop .block.header {
+        height: 12%;
+      }
+      .desktop .block.hero {
+        top: 14.5%;
+        height: 20%;
+      }
+      .desktop .block.cards {
+        top: 36%;
+        height: 28%;
+      }
+      .desktop .block.tools {
+        top: 66%;
+        height: 30%;
+      }
+
+      /* Highlighted inline definition cards */
+      .def {
+        padding: 0.8rem;
+        background: #fff;
+        border: 1px solid var(--chip-border);
+        border-radius: 0.75rem;
+        margin: 0.5rem 0;
+      }
+      .def b {
+        color: var(--color-primary);
+      }
+
+      /* Small list styles */
+      ul {
+        padding-left: 1.2rem;
+      }
+      li + li {
+        margin-top: 0.25rem;
+      }
+
+      footer {
+        margin-top: 2rem;
+        padding: 1.25rem;
+        text-align: center;
+        color: var(--color-muted);
+        border-top: 1px solid var(--chip-border);
+      }
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        padding: 0.3rem 0.55rem;
+        border: 1px solid var(--chip-border);
+        border-radius: 0.5rem;
+        background: #fff;
+        font-size: 0.9rem;
+        color: #334155;
+      }
+      .kbd {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+          "Liberation Mono", "Courier New", monospace;
+        font-size: 0.9rem;
+        background: #f1f5f9;
+        border: 1px solid #e2e8f0;
+        border-radius: 0.35rem;
+        padding: 0.05rem 0.35rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrap">
+        <div class="brand">
+          <div class="logo" aria-hidden="true"></div>
+          <div class="title">
+            <h1>Reading Tracker Hub — Website Planning Document (W05)</h1>
+            <small>WDD 231: Web Frontend Development • Project Site Plan</small>
+          </div>
+        </div>
+        <nav aria-label="On-page navigation">
+          <a href="#site-name">Site Name</a>
+          <a href="#purpose">Site Purpose</a>
+          <a href="#scenarios">Scenarios</a>
+          <a href="#colors">Color Scheme</a>
+          <a href="#typography">Typography</a>
+          <a href="#wireframe">Wireframe</a>
+          <a href="#testing">Testing Checklist</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <!-- Site Name -->
+      <section id="site-name" aria-labelledby="site-name-h">
+        <h2 id="site-name-h">Site Name</h2>
+        <div class="def">
+          <p>
+            <b>Reading Tracker Hub</b> — a simple, personal reading companion
+            that helps users discover new books, keep track of what they’re
+            reading, and stay motivated to finish more books.
+          </p>
+          <p>
+            <b>Why this name?</b> It is clear and descriptive. It immediately
+            tells visitors that the site is centered on tracking reading
+            progress and organizing book recommendations in one hub.
+          </p>
+          <p class="usage">
+            <b>Optional domain availability:</b> <i>readingtrackerhub.me</i> or
+            <i>myreadinghub.site</i> (domain purchase is not required for this
+            class).
+          </p>
+        </div>
+      </section>
+
+      <!-- Purpose -->
+      <section id="purpose" aria-labelledby="purpose-h">
+        <h2 id="purpose-h">Site Purpose</h2>
+        <p>
+          The purpose of <b>Reading Tracker Hub</b> is to provide a focused
+          space where readers can organize their reading life, discover new
+          books to read, and keep track of their progress over time. The site
+          will:
+        </p>
+        <ul>
+          <li>
+            <b>Show curated book recommendations:</b> a catalog of books grouped
+            into simple categories such as fiction, non-fiction,
+            self-improvement, and technology.
+          </li>
+          <li>
+            <b>Help users track their reading:</b> a basic reading tracker where
+            users can record whether a book is “To Read”, “In Progress”, or
+            “Finished”, with optional personal notes.
+          </li>
+          <li>
+            <b>Support simple goals:</b> allow users to set a small reading goal
+            (for example, number of books to finish) and see how many they have
+            completed so far.
+          </li>
+        </ul>
+        <p>
+          This scope allows me to use semantic HTML and responsive CSS along
+          with JavaScript features such as fetching data (from JSON or an API),
+          dynamically rendering book cards, storing preferences with
+          <code class="kbd">localStorage</code>, and interacting with the DOM.
+        </p>
+      </section>
+
+      <!-- Scenarios -->
+      <section id="scenarios" aria-labelledby="scenarios-h">
+        <h2 id="scenarios-h">Scenarios</h2>
+        <ul>
+          <li>
+            <b>“What book should I read next?”</b> A visitor wants to quickly
+            browse recommended books in a specific category (for example,
+            self-improvement or fiction) and view basic details about each book.
+          </li>
+          <li>
+            <b>“Where can I see what I’m currently reading?”</b> A user wants to
+            see a simple list of books they have marked as “In Progress” and
+            update the status when they finish a book.
+          </li>
+          <li>
+            <b>“How many books have I finished this year?”</b> A returning
+            visitor wants to see how many books they have marked as “Finished”
+            compared to their reading goal.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Color Scheme -->
+      <section id="colors" aria-labelledby="colors-h">
+        <h2 id="colors-h">Color Scheme</h2>
+        <p>
+          The color scheme uses a calm, book-friendly palette with a strong
+          primary color and a warm accent. These will be used consistently
+          throughout the final site.
+        </p>
+        <div class="chips" role="list">
+          <div class="chip" role="listitem">
+            <div class="swatch" style="background: var(--color-primary)"></div>
+            <div>
+              <b>Primary — #1E3A8A</b>
+              <div class="usage">
+                Site logo, main headings, navigation links, and key interactive
+                elements.
+              </div>
+            </div>
+          </div>
+          <div class="chip" role="listitem">
+            <div class="swatch" style="background: var(--color-accent)"></div>
+            <div>
+              <b>Accent — #F59E0B</b>
+              <div class="usage">
+                Buttons (for example, “Add to Tracker”), badges (like “New” or
+                “Finished”), and subtle highlights.
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="usage">
+          Neutral colors (white backgrounds with slate grays for text and
+          borders) provide good contrast for long-form reading and keep the
+          focus on the book content.
+        </p>
+      </section>
+
+      <!-- Typography -->
+      <section id="typography" aria-labelledby="typography-h">
+        <h2 id="typography-h">Typography</h2>
+        <div class="typo-grid">
+          <div class="sample">
+            <h3>Headings (Display)</h3>
+            <div class="display">Playfair Display, 700</div>
+            <p class="usage">
+              Used for <b>H1–H2</b> elements such as page titles (“Recommended
+              Books”, “My Reading Tracker”) to create a bookish, elegant feel
+              that fits a reading-focused site.
+            </p>
+          </div>
+          <div class="sample">
+            <h3>Body & UI Text</h3>
+            <p class="body">
+              Inter, 400/600 — used for paragraphs, lists, labels, buttons, and
+              form inputs. It is clean and easy to read, which is important when
+              showing book descriptions and notes.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Wireframes -->
+      <section id="wireframe" aria-labelledby="wireframe-h">
+        <h2 id="wireframe-h">Wireframe (Home Page)</h2>
+        <p>
+          The home page will introduce the site and highlight its main features.
+          The wireframes below show an approximate layout for both mobile and
+          desktop views. They include:
+        </p>
+        <ul>
+          <li>
+            A header with logo and navigation to the main sections (Home, Books,
+            Tracker).
+          </li>
+          <li>
+            A hero/intro area that briefly explains what Reading Tracker Hub is
+            and why it is useful.
+          </li>
+          <li>
+            Feature cards that direct users to the book recommendations, reading
+            tracker, and goals/features.
+          </li>
+          <li>
+            A tools area that may highlight current reading stats or a small
+            “Set your goal” component.
+          </li>
+        </ul>
+
+        <div class="wireframes">
+          <!-- Mobile -->
+          <div class="frame">
+            <h3>Mobile (narrow)</h3>
+            <div class="phone" aria-label="Mobile wireframe">
+              <div class="block header">
+                <span class="label">Header / Logo + Nav</span>
+              </div>
+              <div class="block hero">
+                <span class="label">Hero / Intro to Reading Tracker Hub</span>
+              </div>
+              <div class="block cards">
+                <span class="label"
+                  >Feature Cards (Books / Tracker / Goals)</span
+                >
+              </div>
+              <div class="block tools">
+                <span class="label">Reading Stats / Quick Access Tools</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Desktop -->
+          <div class="frame">
+            <h3>Desktop (wide)</h3>
+            <div class="desktop" aria-label="Desktop wireframe">
+              <div class="block header">
+                <span class="label">Header / Logo + Horizontal Nav</span>
+              </div>
+              <div class="block hero">
+                <span class="label">Hero / Value Proposition + CTA</span>
+              </div>
+              <div class="block cards">
+                <span class="label"
+                  >3 Feature Cards (Recommended Books / Tracker / Goals)</span
+                >
+              </div>
+              <div class="block tools">
+                <span class="label">Reading Stats / Tools Panel</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testing -->
+      <section id="testing" aria-labelledby="testing-h">
+        <h2 id="testing-h">Testing & Self-Check</h2>
+        <ul>
+          <li>
+            <b>HTML Validator:</b> Check the site plan and final project pages
+            using the W3C Markup Validator and fix any errors or warnings.
+          </li>
+          <li>
+            <b>Accessibility:</b> Use WAVE and browser DevTools to verify
+            landmarks, form labels, keyboard focus, and color contrast
+            (especially for buttons and links).
+          </li>
+          <li>
+            <b>Best Practices:</b> Confirm there are no JavaScript console
+            errors, that images include descriptive alt text, and that headings
+            follow a logical order.
+          </li>
+          <li>
+            <b>Performance:</b> Keep CSS simple, optimize images for the web,
+            and stay under the 500 kB page weight guideline for each page.
+          </li>
+          <li>
+            <b>SEO basics:</b> Provide descriptive
+            <code class="kbd">&lt;title&gt;</code> elements and unique
+            <code class="kbd">meta name="description"</code> text for each page
+            in the final project.
+          </li>
+          <li>
+            <b>Responsive:</b> Test from ~320px up to desktop widths, making
+            sure that navigation, book cards, and tracker components reflow
+            cleanly without horizontal scrolling.
+          </li>
+        </ul>
+        <p class="badge" aria-label="Course link hint">
+          Project description: See Week 06 project instructions in Canvas (WDD
+          231).
+        </p>
+      </section>
+    </main>
+
+    <footer>Reading Tracker Hub — Site Plan • WDD 231 • © 2025</footer>
+  </body>
+</html>

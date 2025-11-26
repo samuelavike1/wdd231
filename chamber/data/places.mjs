@@ -4,14 +4,14 @@ export const places = [
       name: "Independence Arch",
       address: "Black Star Square, Accra",
       desc: "Iconic post-independence monument symbolizing Ghana’s freedom and national pride.",
-      image: "independence-arch.webp"
+      image: "independence-arch.jpeg"
     },
     {
       id: "p2",
       name: "James Fort",
       address: "Ussher Town, Accra",
       desc: "17th-century coastal fort with layered history; a window into the city’s colonial past.",
-      image: "james-fort.webp"
+      image: "james-fort.jpg"
     },
     {
       id: "p3",
@@ -32,14 +32,14 @@ export const places = [
       name: "Labadi Beach",
       address: "La Rd, Accra",
       desc: "Popular urban beach with music, food, and weekend vibes—great at sunset.",
-      image: "labadi-beach.webp"
+      image: "labadi-beach.jpg"
     },
     {
       id: "p6",
       name: "Artists Alliance Gallery",
       address: "Beach Dr, Accra",
       desc: "Contemporary and traditional art across three floors—sculpture, textiles, paintings.",
-      image: "artists-alliance.webp"
+      image: "artists-alliance.jpg"
     },
     {
       id: "p7",
@@ -53,7 +53,7 @@ export const places = [
       name: "Legon Botanical Gardens",
       address: "University of Ghana, Legon",
       desc: "Green retreat with canopy walkways, boating, and family-friendly recreation.",
-      image: "legon-botanical.webp"
+      image: "legon-botanical.jpg"
     }
   ];
   

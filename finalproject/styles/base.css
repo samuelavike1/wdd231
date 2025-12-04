@@ -528,3 +528,27 @@ footer a {
     border-radius: .35rem;
     padding: .05rem .35rem;
 }
+
+/* Utility classes */
+.hidden {
+    display: none;
+}
+
+.progress-text {
+    margin-top: .5rem;
+}
+
+.back-link {
+    margin-top: 1rem;
+}
+
+.error-message {
+    color: #b91c1c;
+}
+
+.book-actions {
+    margin-top: .5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+}

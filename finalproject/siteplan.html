@@ -158,6 +158,12 @@
         border-radius: 0.5rem;
         border: 1px solid var(--chip-border);
       }
+      .swatch-primary {
+        background: var(--color-primary);
+      }
+      .swatch-accent {
+        background: var(--color-accent);
+      }
       .chip b {
         display: block;
       }
@@ -448,7 +454,7 @@
         </p>
         <div class="chips" role="list">
           <div class="chip" role="listitem">
-            <div class="swatch" style="background: var(--color-primary)"></div>
+            <div class="swatch swatch-primary"></div>
             <div>
               <b>Primary — #1E3A8A</b>
               <div class="usage">
@@ -458,12 +464,12 @@
             </div>
           </div>
           <div class="chip" role="listitem">
-            <div class="swatch" style="background: var(--color-accent)"></div>
+            <div class="swatch swatch-accent"></div>
             <div>
               <b>Accent — #F59E0B</b>
               <div class="usage">
-                Buttons (for example, “Add to Tracker”), badges (like “New” or
-                “Finished”), and subtle highlights.
+                Buttons (for example, "Add to Tracker"), badges (like "New" or
+                "Finished"), and subtle highlights.
               </div>
             </div>
           </div>

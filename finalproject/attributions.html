@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <!-- Required meta -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Reading Tracker Hub – Attributions</title>
 
+    <!-- Page meta -->
     <meta
       name="description"
-      content="Attributions and sources for the Reading Tracker Hub project."
+      content="Attributions and sources for the images, text, and references used in the Reading Tracker Hub final project."
     />
     <meta name="author" content="Samuel Apusiyine Avike" />
 
+    <!-- Open Graph -->
     <meta property="og:title" content="Reading Tracker Hub – Attributions" />
     <meta
       property="og:description"
-      content="Acknowledgements for images and text used in this project."
+      content="Acknowledgements and references for content used in the Reading Tracker Hub project."
     />
     <meta
       property="og:image"
@@ -26,12 +30,20 @@
     />
     <meta property="og:type" content="website" />
 
+    <!-- Favicon -->
     <link rel="icon" href="images/favicon-rt.png" type="image/png" />
+
+    <!-- Google Fonts with preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Local CSS -->
     <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/larger.css" />
   </head>
   <body>
     <header>
@@ -42,6 +54,24 @@
             <h1>Reading Tracker Hub</h1>
             <small>Attributions</small>
           </div>
+        </div>
+        <div class="navbar">
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+          >
+            <span class="bars" aria-hidden="true"></span>
+            <span>Menu</span>
+          </button>
+          <nav class="nav-links" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="books.html">Books</a>
+            <a href="tracker.html">My Tracker</a>
+            <a href="form.html">Suggest a Book</a>
+            <a href="attributions.html">Attributions</a>
+          </nav>
         </div>
       </div>
     </header>
@@ -55,12 +85,13 @@
             used here for educational purposes only.
           </li>
           <li>
-            Any cover images you add should be optimized and cited appropriately
-            (for example, from publisher sites or royalty-free sources).
+            Any cover images added for this project should be optimized and
+            cited appropriately (for example, from publisher sites or
+            royalty-free image sources).
           </li>
           <li>
-            Quote used in the project description: “Happiness, Your Heritage –
-            Dieter F. Uchtdorf.”
+            Quote referenced in the project description: “Happiness, Your
+            Heritage – Dieter F. Uchtdorf.”
           </li>
         </ul>
       </section>
@@ -71,9 +102,11 @@
       <a href="books.html">Books</a> • <a href="tracker.html">My Tracker</a> •
       <a href="form.html">Suggest a Book</a> •
       <a href="attributions.html">Attributions</a> •
-      <a href="https://your-video-link-here" target="_blank" rel="noopener"
-        >Project Demo Video</a
-      >
+      <a href="https://your-video-link-here" target="_blank" rel="noopener">
+        Project Demo Video
+      </a>
     </footer>
+
+    <script type="module" src="scripts/main.js"></script>
   </body>
 </html>

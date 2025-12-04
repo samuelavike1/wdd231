@@ -1,37 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Required meta -->
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Reading Tracker Hub – Suggest a Book</title>
 
+    <!-- Page meta -->
     <meta
       name="description"
-      content="Suggest a book to add to the Reading Tracker Hub recommendation list."
+      content="Use this form to suggest a book that should be added to the Reading Tracker Hub recommendations."
     />
     <meta name="author" content="Samuel Apusiyine Avike" />
 
+    <!-- Open Graph -->
     <meta property="og:title" content="Reading Tracker Hub – Suggest a Book" />
     <meta
       property="og:description"
-      content="Send a recommendation for a book we should add."
+      content="Send a recommendation for a book you love so it can be considered for the Reading Tracker Hub list."
     />
     <meta
       property="og:image"
       content="https://samuelavike1.github.io/wdd231/finalproject/images/og-reading-tracker.jpg"
     />
-    <meta property="og:type" content="website" />
     <meta
       property="og:url"
       content="https://samuelavike1.github.io/wdd231/finalproject/form.html"
     />
+    <meta property="og:type" content="website" />
 
+    <!-- Favicon -->
     <link rel="icon" href="images/favicon-rt.png" type="image/png" />
+
+    <!-- Google Fonts with preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Local CSS -->
     <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/larger.css" />
   </head>
   <body>
     <header>
@@ -69,8 +81,7 @@
         <h2 id="form-h">Book Recommendation Form</h2>
         <p>
           If you have a favorite book you think others should read, share it
-          here. The information is only used for this class project
-          demonstration.
+          here. This form is used for demonstration only in this class project.
         </p>
 
         <form class="form-grid" method="get" action="form-result.html">
@@ -121,18 +132,18 @@
 
           <div class="form-field">
             <span>How often do you read?</span>
-            <label
-              ><input type="radio" name="frequency" value="Daily" required />
-              Daily</label
-            >
-            <label
-              ><input type="radio" name="frequency" value="Weekly" />
-              Weekly</label
-            >
-            <label
-              ><input type="radio" name="frequency" value="Occasionally" />
-              Occasionally</label
-            >
+            <label>
+              <input type="radio" name="frequency" value="Daily" required />
+              Daily
+            </label>
+            <label>
+              <input type="radio" name="frequency" value="Weekly" />
+              Weekly
+            </label>
+            <label>
+              <input type="radio" name="frequency" value="Occasionally" />
+              Occasionally
+            </label>
           </div>
 
           <div class="form-field">
@@ -152,9 +163,9 @@
       <a href="books.html">Books</a> • <a href="tracker.html">My Tracker</a> •
       <a href="form.html">Suggest a Book</a> •
       <a href="attributions.html">Attributions</a> •
-      <a href="https://your-video-link-here" target="_blank" rel="noopener"
-        >Project Demo Video</a
-      >
+      <a href="https://your-video-link-here" target="_blank" rel="noopener">
+        Project Demo Video
+      </a>
     </footer>
 
     <script type="module" src="scripts/main.js"></script>

@@ -1,0 +1,38 @@
+/* Larger screen enhancements for Reading Tracker Hub */
+
+@media (min-width: 768px) {
+
+    header .brand {
+        justify-content: space-between;
+    }
+
+    .nav-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        display: flex !important;
+        flex-direction: row;
+        gap: .75rem;
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+
+    .book-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .tracker-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1024px) {
+    .book-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}

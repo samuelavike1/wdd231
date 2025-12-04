@@ -56,7 +56,7 @@ async function fetchBooks() {
     console.error("Error fetching books:", error);
     if (errorEl) {
       errorEl.textContent = "Sorry, we could not load the book list. Please try again later.";
-      errorEl.style.display = "block";
+      errorEl.classList.remove("hidden");
     }
   }
 }
@@ -114,10 +114,7 @@ function renderBooks() {
     rating.textContent = `Rating: ${book.rating.toFixed(1)}`;
 
     const actions = document.createElement("div");
-    actions.style.marginTop = ".5rem";
-    actions.style.display = "flex";
-    actions.style.flexWrap = "wrap";
-    actions.style.gap = ".4rem";
+    actions.className = "book-actions";
 
     const detailsBtn = document.createElement("button");
     detailsBtn.className = "button button-secondary";

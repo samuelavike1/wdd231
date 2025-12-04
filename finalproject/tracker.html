@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Reading Tracker Hub – My Tracker</title>
+
+    <meta
+      name="description"
+      content="View and update your personal reading tracker, including statuses and reading goals."
+    />
+    <meta name="author" content="Samuel Apusiyine Avike" />
+
+    <meta property="og:title" content="Reading Tracker Hub – My Tracker" />
+    <meta
+      property="og:description"
+      content="Keep track of the books you want to read, are reading, and have finished."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://samuelavike1.github.io/wdd231/final/tracker.html"
+    />
+
+    <link rel="icon" href="images/favicon-rt.png" type="image/png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/base.css" />
+  </head>
+  <body>
+    <header>
+      <div class="wrap">
+        <div class="brand">
+          <div class="logo" aria-hidden="true"></div>
+          <div class="title">
+            <h1>Reading Tracker Hub</h1>
+            <small>My Reading Tracker</small>
+          </div>
+        </div>
+        <div class="navbar">
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+          >
+            <span class="bars" aria-hidden="true"></span>
+            <span>Menu</span>
+          </button>
+          <nav class="nav-links" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="books.html">Books</a>
+            <a href="tracker.html">My Tracker</a>
+            <a href="form.html">Suggest a Book</a>
+            <a href="attributions.html">Attributions</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <section aria-labelledby="goal-h">
+        <h2 id="goal-h">Reading Goal</h2>
+        <p>
+          Set a simple goal for how many books you want to finish. This data is
+          stored only in your browser.
+        </p>
+        <form id="goalForm" class="form-grid">
+          <div class="form-field">
+            <label for="goalInput">Number of books</label>
+            <input type="number" id="goalInput" name="goal" min="0" step="1" />
+            <small>Example: 12 (for one book per month)</small>
+          </div>
+          <button class="btn btn-primary" type="submit">Save Goal</button>
+        </form>
+        <p style="margin-top: 0.5rem">
+          Progress:
+          <span class="kbd" id="goalProgressText">0 of 0 books finished</span>
+        </p>
+      </section>
+
+      <section aria-labelledby="tracker-h">
+        <h2 id="tracker-h">My Reading List</h2>
+        <p>
+          These books were added from the <a href="books.html">Books</a> page.
+          Update their status as you read.
+        </p>
+
+        <div class="controls">
+          <label>
+            Show:
+            <select id="statusFilter" name="status">
+              <option value="all">All statuses</option>
+              <option value="to-read">To Read</option>
+              <option value="in-progress">In Progress</option>
+              <option value="finished">Finished</option>
+            </select>
+          </label>
+        </div>
+
+        <div
+          id="trackerContainer"
+          class="tracker-list"
+          aria-live="polite"
+        ></div>
+      </section>
+    </main>
+
+    <footer>
+      <span>© 2025 Reading Tracker Hub</span> • <a href="index.html">Home</a> •
+      <a href="books.html">Books</a> • <a href="tracker.html">My Tracker</a> •
+      <a href="form.html">Suggest a Book</a> •
+      <a href="attributions.html">Attributions</a> •
+      <a href="https://your-video-link-here" target="_blank" rel="noopener"
+        >Project Demo Video</a
+      >
+    </footer>
+
+    <script type="module" src="scripts/main.js"></script>
+    <script type="module" src="scripts/tracker.js"></script>
+  </body>
+</html>

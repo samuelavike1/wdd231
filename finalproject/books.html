@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Reading Tracker Hub – Books</title>
+
+    <meta
+      name="description"
+      content="Browse recommended books by genre and add them to your personal reading tracker."
+    />
+    <meta name="author" content="Samuel Apusiyine Avike" />
+
+    <meta property="og:title" content="Reading Tracker Hub – Books" />
+    <meta
+      property="og:description"
+      content="A curated list of books you can add to your reading tracker."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://samuelavike1.github.io/wdd231/final/books.html"
+    />
+
+    <link rel="icon" href="images/favicon-rt.png" type="image/png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/base.css" />
+  </head>
+  <body>
+    <header>
+      <div class="wrap">
+        <div class="brand">
+          <div class="logo" aria-hidden="true"></div>
+          <div class="title">
+            <h1>Reading Tracker Hub</h1>
+            <small>Book Recommendations</small>
+          </div>
+        </div>
+        <div class="navbar">
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+          >
+            <span class="bars" aria-hidden="true"></span>
+            <span>Menu</span>
+          </button>
+          <nav class="nav-links" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="books.html">Books</a>
+            <a href="tracker.html">My Tracker</a>
+            <a href="form.html">Suggest a Book</a>
+            <a href="attributions.html">Attributions</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <section aria-labelledby="books-h">
+        <h2 id="books-h">Recommended Books</h2>
+        <p>
+          Use the filters to explore books by genre, or search by title or
+          author. Click <b>View details</b> for more information, or
+          <b>Add to tracker</b> to save a book to your personal reading list.
+        </p>
+
+        <div class="controls">
+          <label>
+            Search:
+            <input
+              type="search"
+              id="searchInput"
+              name="search"
+              placeholder="Title or author"
+            />
+          </label>
+          <label>
+            Genre:
+            <select id="genreFilter" name="genre">
+              <option value="all">All genres</option>
+            </select>
+          </label>
+        </div>
+
+        <div id="booksContainer" class="book-grid" aria-live="polite"></div>
+        <p
+          id="booksError"
+          class="hero-lead"
+          style="color: #b91c1c; display: none"
+        ></p>
+      </section>
+    </main>
+
+    <!-- Modal -->
+    <div
+      class="modal-backdrop"
+      id="bookModalBackdrop"
+      role="dialog"
+      aria-modal="true"
+      aria-hidden="true"
+    >
+      <div class="modal" role="document">
+        <div class="modal-header">
+          <h3 id="modalTitle">Book details</h3>
+          <button class="modal-close" type="button" aria-label="Close details">
+            &times;
+          </button>
+        </div>
+        <div class="modal-body">
+          <p id="modalMeta"></p>
+          <p id="modalDescription"></p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <span>© 2025 Reading Tracker Hub</span> • <a href="index.html">Home</a> •
+      <a href="books.html">Books</a> • <a href="tracker.html">My Tracker</a> •
+      <a href="form.html">Suggest a Book</a> •
+      <a href="attributions.html">Attributions</a> •
+      <a href="https://your-video-link-here" target="_blank" rel="noopener"
+        >Project Demo Video</a
+      >
+    </footer>
+
+    <script type="module" src="scripts/main.js"></script>
+    <script type="module" src="scripts/books.js"></script>
+  </body>
+</html>

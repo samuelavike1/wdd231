@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Reading Tracker Hub – Home</title>
+
+    <meta
+      name="description"
+      content="Reading Tracker Hub helps you discover great books, track your reading progress, and stay motivated to reach your reading goals."
+    />
+    <meta name="author" content="Your Name" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Reading Tracker Hub" />
+    <meta
+      property="og:description"
+      content="Discover books, track your reading, and reach your reading goals."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://samuelavike1.github.io/wdd231/final/index.html"
+    />
+
+    <link rel="icon" href="images/favicon-rt.png" type="image/png" />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles/base.css" />
+  </head>
+  <body>
+    <header>
+      <div class="wrap">
+        <div class="brand">
+          <div class="logo" aria-hidden="true"></div>
+          <div class="title">
+            <h1>Reading Tracker Hub</h1>
+            <small
+              >Discover books • Track your reading • Reach your goals</small
+            >
+          </div>
+        </div>
+        <div class="navbar">
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+          >
+            <span class="bars" aria-hidden="true"></span>
+            <span>Menu</span>
+          </button>
+          <nav class="nav-links" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="books.html">Books</a>
+            <a href="tracker.html">My Tracker</a>
+            <a href="form.html">Suggest a Book</a>
+            <a href="attributions.html">Attributions</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <section class="hero">
+        <div>
+          <h2 class="hero-title">Build a reading habit that sticks.</h2>
+          <p class="hero-lead">
+            Reading Tracker Hub keeps all your book ideas, current reads, and
+            finished books in one place. Browse recommendations, add them to
+            your tracker, and watch your progress grow.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="books.html"
+              >Browse Recommended Books</a
+            >
+            <a class="btn btn-outline" href="tracker.html"
+              >Open My Reading Tracker</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="features-h">
+        <h2 id="features-h">Features</h2>
+        <div class="grid grid-3">
+          <article class="card">
+            <h3>Curated Book List</h3>
+            <p>
+              Explore a small but powerful collection of fiction, technology,
+              and self-improvement books.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Simple Reading Tracker</h3>
+            <p>
+              Mark books as “To Read”, “In Progress”, or “Finished”, and keep
+              quick notes for each one.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Personal Goals</h3>
+            <p>
+              Set a reading goal and see how many books you have finished so far
+              this year.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section aria-labelledby="stats-h">
+        <h2 id="stats-h">Your Reading Snapshot</h2>
+        <p>
+          This summary is stored only in your browser using
+          <span class="kbd">localStorage</span>.
+        </p>
+        <div class="stats-row">
+          <div class="stat">
+            <b><span data-stat="total-books">0</span></b>
+            Books in your tracker
+          </div>
+          <div class="stat">
+            <b><span data-stat="finished-books">0</span></b>
+            Books marked as finished
+          </div>
+          <div class="stat">
+            <b><span data-stat="goal">Not set</span></b>
+            Reading goal (books)
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>© 2025 Reading Tracker Hub</span> • <a href="index.html">Home</a> •
+      <a href="books.html">Books</a> • <a href="tracker.html">My Tracker</a> •
+      <a href="form.html">Suggest a Book</a> •
+      <a href="attributions.html">Attributions</a> •
+      <a href="https://your-video-link-here" target="_blank" rel="noopener"
+        >Project Demo Video</a
+      >
+    </footer>
+
+    <script type="module" src="scripts/main.js"></script>
+  </body>
+</html>

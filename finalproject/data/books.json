@@ -1,0 +1,168 @@
+[
+    {
+      "id": "atomic-habits",
+      "title": "Atomic Habits",
+      "author": "James Clear",
+      "year": 2018,
+      "pages": 320,
+      "genre": "Self-Improvement",
+      "rating": 4.8,
+      "cover": "images/cover-atomic-habits.jpg",
+      "description": "A practical guide to building better habits and breaking bad ones through small, consistent changes."
+    },
+    {
+      "id": "deep-work",
+      "title": "Deep Work",
+      "author": "Cal Newport",
+      "year": 2016,
+      "pages": 304,
+      "genre": "Productivity",
+      "rating": 4.6,
+      "cover": "images/cover-deep-work.jpg",
+      "description": "Explores the benefits of focused work in a distracted world and how to structure your time for maximum impact."
+    },
+    {
+      "id": "clean-code",
+      "title": "Clean Code",
+      "author": "Robert C. Martin",
+      "year": 2008,
+      "pages": 464,
+      "genre": "Technology",
+      "rating": 4.7,
+      "cover": "images/cover-clean-code.jpeg",
+      "description": "Guidelines and principles for writing readable, maintainable, and efficient code."
+    },
+    {
+      "id": "alchemist",
+      "title": "The Alchemist",
+      "author": "Paulo Coelho",
+      "year": 1988,
+      "pages": 208,
+      "genre": "Fiction",
+      "rating": 4.3,
+      "cover": "images/cover-alchemist.webp",
+      "description": "A fable about following your dreams and personal legend through the story of a young shepherd."
+    },
+    {
+      "id": "mindset",
+      "title": "Mindset",
+      "author": "Carol S. Dweck",
+      "year": 2006,
+      "pages": 320,
+      "genre": "Self-Improvement",
+      "rating": 4.5,
+      "cover": "images/cover-mindset.webp",
+      "description": "Explains fixed vs growth mindset and how our beliefs about talent influence success."
+    },
+    {
+      "id": "thinking-fast-slow",
+      "title": "Thinking, Fast and Slow",
+      "author": "Daniel Kahneman",
+      "year": 2011,
+      "pages": 512,
+      "genre": "Non-Fiction",
+      "rating": 4.4,
+      "cover": "images/cover-thinking-fast-slow.webp",
+      "description": "Describes two systems of thinking and how they affect decision-making and judgment."
+    },
+    {
+      "id": "rich-dad-poor-dad",
+      "title": "Rich Dad Poor Dad",
+      "author": "Robert Kiyosaki",
+      "year": 1997,
+      "pages": 336,
+      "genre": "Finance",
+      "rating": 4.4,
+      "cover": "images/cover-rich-dad-poor-dad.jpg",
+      "description": "A personal finance classic that contrasts two approaches to money and investing."
+    },
+    {
+      "id": "pragmatic-programmer",
+      "title": "The Pragmatic Programmer",
+      "author": "Andrew Hunt, David Thomas",
+      "year": 1999,
+      "pages": 352,
+      "genre": "Technology",
+      "rating": 4.7,
+      "cover": "images/cover-pragmatic-programmer.jpg",
+      "description": "Timeless tips and practices for becoming a better, more effective software developer."
+    },
+    {
+      "id": "cant-hurt-me",
+      "title": "Can't Hurt Me",
+      "author": "David Goggins",
+      "year": 2018,
+      "pages": 364,
+      "genre": "Biography",
+      "rating": 4.8,
+      "cover": "images/cover-cant-hurt-me.jpg",
+      "description": "Goggins shares his life story and the mindset strategies he used to push past pain and limits."
+    },
+    {
+      "id": "start-with-why",
+      "title": "Start With Why",
+      "author": "Simon Sinek",
+      "year": 2009,
+      "pages": 256,
+      "genre": "Business",
+      "rating": 4.4,
+      "cover": "images/cover-start-with-why.webp",
+      "description": "Explores how leaders inspire action by clearly communicating their purpose and 'why'."
+    },
+    {
+      "id": "7-habits",
+      "title": "The 7 Habits of Highly Effective People",
+      "author": "Stephen R. Covey",
+      "year": 1989,
+      "pages": 381,
+      "genre": "Self-Improvement",
+      "rating": 4.6,
+      "cover": "images/cover-7-habits.jpg",
+      "description": "Seven principles for personal and interpersonal effectiveness grounded in timeless values."
+    },
+    {
+      "id": "dune",
+      "title": "Dune",
+      "author": "Frank Herbert",
+      "year": 1965,
+      "pages": 688,
+      "genre": "Fiction",
+      "rating": 4.5,
+      "cover": "images/cover-dune.jpg",
+      "description": "Epic science fiction saga of politics, religion, and ecology on the desert planet Arrakis."
+    },
+    {
+      "id": "harry-potter-1",
+      "title": "Harry Potter and the Sorcerer's Stone",
+      "author": "J.K. Rowling",
+      "year": 1997,
+      "pages": 320,
+      "genre": "Fiction",
+      "rating": 4.8,
+      "cover": "images/cover-hp1.jpg",
+      "description": "The beginning of Harry's journey into the wizarding world at Hogwarts School of Witchcraft and Wizardry."
+    },
+    {
+      "id": "art-of-war",
+      "title": "The Art of War",
+      "author": "Sun Tzu",
+      "year": -500,
+      "pages": 160,
+      "genre": "Classics",
+      "rating": 4.2,
+      "cover": "images/cover-art-of-war.webp",
+      "description": "Ancient Chinese text on strategy, conflict, and leadership that is still widely applied today."
+    },
+    {
+      "id": "code-complete",
+      "title": "Code Complete",
+      "author": "Steve McConnell",
+      "year": 2004,
+      "pages": 960,
+      "genre": "Technology",
+      "rating": 4.6,
+      "cover": "images/cover-code-complete.jpg",
+      "description": "Comprehensive guide to software construction, design, and debugging best practices."
+    }
+  ]
+  

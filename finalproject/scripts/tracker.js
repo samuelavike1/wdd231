@@ -88,7 +88,7 @@ function renderTracker() {
 
     const removeBtn = document.createElement("button");
     removeBtn.type = "button";
-    removeBtn.className = "btn btn-outline";
+    removeBtn.className = "button button-secondary";
     removeBtn.textContent = "Remove from tracker";
     removeBtn.addEventListener("click", () => {
       trackerState.books = trackerState.books.filter(b => b.id !== book.id);

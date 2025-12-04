@@ -9,7 +9,7 @@ const modalBackdrop = document.getElementById("bookModalBackdrop");
 const modalTitle = document.getElementById("modalTitle");
 const modalMeta = document.getElementById("modalMeta");
 const modalDescription = document.getElementById("modalDescription");
-const modalCloseBtn = document.querySelector(".modal-close");
+const modalCloseBtn = document.querySelector(".close-button");
 
 let allBooks = [];
 
@@ -95,7 +95,7 @@ function renderBooks() {
 
   filtered.forEach(book => {
     const card = document.createElement("article");
-    card.className = "card book-card";
+    card.className = "feature-box book-item";
 
     const img = document.createElement("img");
     img.src = book.cover;
@@ -120,13 +120,13 @@ function renderBooks() {
     actions.style.gap = ".4rem";
 
     const detailsBtn = document.createElement("button");
-    detailsBtn.className = "btn btn-outline";
+    detailsBtn.className = "button button-secondary";
     detailsBtn.type = "button";
     detailsBtn.textContent = "View details";
     detailsBtn.addEventListener("click", () => openModal(book));
 
     const addBtn = document.createElement("button");
-    addBtn.className = "btn btn-primary";
+    addBtn.className = "button button-primary";
     addBtn.type = "button";
     addBtn.textContent = "Add to tracker";
     addBtn.addEventListener("click", () => {

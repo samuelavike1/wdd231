@@ -6,23 +6,23 @@
         justify-content: space-between;
     }
 
-    .nav-container {
+    .navigation-wrapper {
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
 
-    .nav-links {
+    .navigation-menu {
         display: flex !important;
         flex-direction: row;
         gap: .75rem;
     }
 
-    .nav-toggle {
+    .menu-toggle-btn {
         display: none;
     }
 
-    .book-grid {
+    .books-layout {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
@@ -32,7 +32,7 @@
 }
 
 @media (min-width: 1024px) {
-    .book-grid {
+    .books-layout {
         grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 }

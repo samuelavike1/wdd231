@@ -55,9 +55,9 @@
             <small>My Reading Tracker</small>
           </div>
         </div>
-        <div class="navbar">
+        <div class="navigation-wrapper">
           <button
-            class="nav-toggle"
+            class="menu-toggle-btn"
             type="button"
             aria-label="Toggle navigation"
             aria-expanded="false"
@@ -65,7 +65,7 @@
             <span class="bars" aria-hidden="true"></span>
             <span>Menu</span>
           </button>
-          <nav class="nav-links" aria-label="Main navigation">
+          <nav class="navigation-menu" aria-label="Main navigation">
             <a href="index.html">Home</a>
             <a href="books.html">Books</a>
             <a href="tracker.html">My Tracker</a>
@@ -83,13 +83,13 @@
           Set a simple goal for how many books you want to finish. This data is
           stored only in your browser.
         </p>
-        <form id="goalForm" class="form-grid">
+        <form id="goalForm" class="form-layout">
           <div class="form-field">
             <label for="goalInput">Number of books</label>
             <input type="number" id="goalInput" name="goal" min="0" step="1" />
             <small>Example: 12 (for one book per month)</small>
           </div>
-          <button class="btn btn-primary" type="submit">Save Goal</button>
+          <button class="button button-primary" type="submit">Save Goal</button>
         </form>
         <p style="margin-top: 0.5rem">
           Progress:

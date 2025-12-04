@@ -1,6 +1,6 @@
 // scripts/main.js
-const navToggle = document.querySelector(".nav-toggle");
-const navLinks = document.querySelector(".nav-links");
+const navToggle = document.querySelector(".menu-toggle-btn");
+const navLinks = document.querySelector(".navigation-menu");
 
 if (navToggle && navLinks) {
   navToggle.addEventListener("click", () => {
@@ -12,7 +12,7 @@ if (navToggle && navLinks) {
 
 // Wayfinding: mark current page link
 const currentPath = window.location.pathname.split("/").pop() || "index.html";
-document.querySelectorAll(".nav-links a").forEach(link => {
+document.querySelectorAll(".navigation-menu a").forEach(link => {
   const href = link.getAttribute("href");
   if (href && href.endsWith(currentPath)) {
     link.setAttribute("aria-current", "page");

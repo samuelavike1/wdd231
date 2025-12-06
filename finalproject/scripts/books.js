@@ -1,5 +1,3 @@
-// scripts/books.js
-
 const booksContainer = document.getElementById("booksContainer");
 const genreFilter = document.getElementById("genreFilter");
 const searchInput = document.getElementById("searchInput");
